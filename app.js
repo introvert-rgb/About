@@ -58,3 +58,4 @@ function discountChecker(pageViews) {
         }
     }
 }
+
