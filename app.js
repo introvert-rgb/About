@@ -3,9 +3,6 @@ let view = document.querySelector('#view');
 let money = document.querySelector('#cost');
 let discount = document.querySelector('#check');
 
-
-
-
 discount.onchange = calculate;
 slider.onchange = calculate;
 
@@ -13,19 +10,16 @@ slider.onchange = calculate;
 function calculate() {
     let pageViews = slider.value * 10;
     view.innerHTML = slider.value * 10 + "K";
-    console.log(pageViews);
-
+    
     discountChecker(pageViews);
 
-
-
-
 }
-// slider.addEventListener('input', () => {
-//     let x = slider.value;
-//     let color = 'linear-gradient(90deg, hsl(174, 77%, 80%)' + x + '%, hsl(224, 65% , 95% )' + x + '% )';
-//     slider.style.background = color;
-// });
+
+slider.addEventListener('input', () => {
+    let x = slider.value;
+    let color = 'linear-gradient(90deg, hsl(174, 77%, 80%)' + x + '%, hsl(224, 65% , 95% )' + x + '% )';
+    slider.style.background = color;
+});
 
 
 function discountChecker(pageViews) {
